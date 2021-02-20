@@ -1,0 +1,352 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telecom customer churn prediction </title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="C:/Users/welcome/Desktop/templates/styles.css">
+
+
+</head>
+
+<body style="background-image: url('telecom.jpg');">
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container-fluid">
+            <div class="navbar-header" >
+                <a class="navbar-brand" style="font-size:300%;color:black"><b>churn_prediction</b></a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="http://localhost:5000/" method="post">
+
+
+      
+             <div class="row" >
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title"style="background-color:white;">SeniorCitizen:</h5>
+                            <!-- Total Stops -->
+                            <select name="query1" id="query1" required="required">
+                                <option value=0>No</option>
+                                <option value=1>Yes</option>
+                               
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                
+              <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">gender:</h5>
+                            <!-- Destination -->
+                            <select name="query4" id="query4" required="required">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                               
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <br><br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <!-- Source -->
+                            <h5 class="card-title">TotalCharges:<i style="font-size: 14px";>eg:1200</i></h5>
+                           <textarea class="form-control" rows="2" id="query3" name="query3" rows="2" cols="5" autofocus></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+             <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">MonthlyCharges:<i style="font-size: 14px";>eg:100</i></h5>
+                            <!-- Total Stops -->
+                            <textarea class="form-control" rows="2" id="query2" name="query2" rows="2" cols="5" autofocus></textarea>
+                           
+                        </div>
+                    </div>
+                </div>
+              </div>
+            <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">Partner:</h5>
+                            <!-- Total Stops -->
+                            <select name="query5" id="query5" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                              
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">Dependents:</h5>
+                            <!-- Total Stops -->
+                            <select name="query6" id="query6" required="required">
+                               <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          
+            <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">PhoneService:</h5>
+                            <!-- Total Stops -->
+                            <select name="query7" id="query7" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">MultipleLines:</h5>
+                            <!-- Total Stops -->
+                            <select name="query8" id="query8" required="required">
+                               <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">InternetService:</h5>
+                            <!-- Total Stops -->
+                            <select name="query9" id="query9" required="required">
+                                <option value="DSL">DSL</option>
+                                <option value="Fiber optic">Fiber optic</option>
+                                <option value="No">No</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">OnlineSecurity:</h5>
+                            <!-- Total Stops -->
+                            <select name="query10" id="query10" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">OnlineBackup:</h5>
+                            <!-- Total Stops -->
+                            <select name="query11" id="query11" required="required">
+                             <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">DeviceProtection:</h5>
+                            <!-- Total Stops -->
+                            <select name="query12" id="query12" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">TechSupport:</h5>
+                            <!-- Total Stops -->
+                            <select name="query13" id="query13" required="required">
+                                 <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">StreamingTV:</h5>
+                            <!-- Total Stops -->
+                            <select name="query14" id="query14" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">StreamingMovies:</h5>
+                            <!-- Total Stops -->
+                            <select name="query15" id="query15" required="required">
+                                 <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">Contract:</h5>
+                            <!-- Total Stops -->
+                            <select name="query16" id="query16" required="required">
+                                <option value="Month-to-month">Month-to-month</option>
+                                <option value="One year">One year</option>
+                                <option value="Two year">Two year</option>
+                              
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">PaperlessBilling:</h5>
+                            <!-- Total Stops -->
+                            <select name="query17" id="query17" required="required">
+                               <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">PaymentMethod:</h5>
+                            <!-- Total Stops -->
+                            <select name="query18" id="query18" required="required">
+                                <option value="Electronic check">Electronic check</option>
+                                <option value="Mailed check">Mailed check</option>
+                                <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                                <option value="Credit card (automatic)">Credit card (automatic)</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+             <br><br>
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body"style="border-style:solid">
+                            <h5 class="card-title">tenure:<i style="font-size: 14px";>give num(1-72)</i></h5>
+                            <!-- Total Stops -->
+                            <textarea class="form-control" rows="2" id="query19" name="query19" rows="2" cols="5" autofocus></textarea>
+                        </div>
+                    </div>
+                </div>
+              </div>
+  
+
+
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+           <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+        </form>
+
+        
+              <div class="row"> 
+			<div class="col-sm-9">
+			<textarea class="form-control" rows="2" id="comment" name="query6" rows="2" cols="5" autofocus>{{output1}}</textarea>
+			<textarea class="form-control" rows="2" id="comment" name="query7" rows="2" cols="5" autofocus>{{output2}}</textarea>
+			</div>
+		</div>
+        <br>
+        <br>
+        
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
